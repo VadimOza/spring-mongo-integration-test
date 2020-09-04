@@ -1,7 +1,6 @@
-package com.repository.repositoryintegration;
+package com.vadym.repository;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.test.context.SpringBootTest;
+import com.vadym.TestApplication;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
@@ -14,10 +13,10 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 @ContextConfiguration(
-        initializers = TestApplication.Initializer.class
+        initializers = BaseMongoTest.Initializer.class,
+        classes = TestApplication.class
 )
-@SpringBootApplication
-public class TestApplication {
+public abstract class BaseMongoTest {
 
 
     static class Initializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {

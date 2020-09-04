@@ -1,4 +1,4 @@
-package com.repository.repositoryintegration;
+package com.vadym.domain;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
